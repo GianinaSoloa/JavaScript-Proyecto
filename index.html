@@ -15,7 +15,110 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css"><!-- CSS --> 
     <title>Proyectos Llave en mano - Grupo Boost</title>
 </head>
-<body>   
+<body>
+    <header>
+        <!--MENÚ-->
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                    <a href="../index.html"><img src="../images/logo-boost.png" alt="Logo Grupo Boost" ></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">HOME</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                NUESTROS PROYECTOS <i class="bi bi-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="proyectos.html">VER TODOS</a></li>
+                                    <li><a class="dropdown-item" href="garden.html">GARDEN 941</a></li>
+                                    <li><a class="dropdown-item" href="gorina.html">CASA GORINA</a></li>
+                                    <li><a class="dropdown-item" href="gardel.html">CASA GARDEL</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="quienessomos.html">QUIÉNES SOMOS</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                ELEGINOS <i class="bi bi-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="pozo.html">PROYECTOS EN POZO</a></li>
+                                    <li><a class="dropdown-item" aria-current="page" href="llavemano.html">LLAVE EN MANO</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contacto.html">CONTACTO</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>    
+    </header>
+<!--IMAGEN-->
+        <section class="imagenprincipal">
+            <img src="../images/llave-principal.png" alt="Grupo Boost - Proyectos llave en mano">
+        </section>
+<!--TÍTULO-->
+    <section class="titulo"> 
+        <h1> PROYECTOS <span class="negrita">LLAVE EN MANO</span> </h1>
+    </section>
+<!--PÁRRAFO-->
+<main>
+<section class="informacion__parrafo">
+    <p>Hacemos tu casa a medida. En otras palabras: hacemos realidad tu sueño. Juntos vamos a diseñar por completo tu casa: definir el estilo, aberturas, pisos, sanitarios, pérgolas y más. Todo basado en el presupuesto que deseas destinar.</p>
+    <p>Nos encargamos del pre-proyecto y proyecto, planificación, dirección técnica, dirección ejecutiva y ejecución de obra.</p>
+    <p>Si no tenés tiempo ni querés lidiar con los típicos inconvenientes de obra, ¡este tipo de proyectos es ideal para vos!</p>
+
+</section>
+<!--FRASE-->         
+<section class="parrafo">
+    <h2><span class="negrita">CREAMOS</span> Y <span class="negrita">CUMPLIMOS</span> SUEÑOS.</h2>
+</section>
+<!--FORMULARIO-->  
+<section class="formulario">
+    <h2>¿TENÉS TU LOTE?</h2>
+    <h3>hacemos tu casa a medida</h3>
+    <form action="" method="post">
+            <input type="text" name="nombreCompleto" id="nombreCompleto" placeholder="NOMBRE COMPLETO" required>
+            <input type="email" name="email" id="email" placeholder="EMAIL" required>
+            <select name="proyecto">
+                <option disabled selected>TIPO DE PROYECTO</option>
+                <option value="value2">LLAVE EN MANO</option>
+            </select>   
+            <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="COMENTARIO"></textarea>
+            <input class="boton" type="submit" value="QUIERO MI CASA A MEDIDA">
+        </form>
+</section>
+</main>
+<!--FOOTER--> 
+    <footer>
+        <div class="footer__contenedor">
+            <div class="logo">
+                <a href="../index.html"><img src="../images/logo-boost.png" alt="Logo Grupo Boost" ></a>
+                <p class="logoTexto">Servicio completo e integral: diseño, desarrollo, ejecución y comercialización de proyectos inmobiliarios en La Plata y alrededores.</p>
+            </div>
+            <div class="contacto">
+                    <h5>CONTACTO</h5>   
+                    <p>WhatsApp +54 9 221 586 0631</p>
+                    <p>grupoboostok@gmail.com.ar</p>
+                    <p>La Plata, Buenos Aires.</p>
+            </div>
+        </div>    
+        <div class="redes">
+            <a href="https://www.facebook.com/grupoboostok" target="blank_"><i class="icono bi bi-facebook"></i></a> 
+            <a href="https://www.instagram.com/grupoboost/" target="blank_"><i class="icono bi bi-instagram"></i></a> 
+        </div>
+        <div id="arriba">
+            <a href="#top" title="Ir arriba"><i class="bi bi-chevron-up"></i></a>
+        </div>
+    </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> <!-- BOOTSTRAP -->     
 <script src="index.js"></script>
 </body>
 </html>
