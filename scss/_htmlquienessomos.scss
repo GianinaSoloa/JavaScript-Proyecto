@@ -1,0 +1,46 @@
+/* HTML - QUIÉNES SOMOS */
+
+.quienessomos__parrafo{
+    font-size: 23px;
+    font-weight: 200;
+    padding-top: 2%;
+    text-align: center;
+    letter-spacing: 2px;
+    max-width: 900px;
+    margin: 0 auto;
+
+    & p{
+        margin: 4%;
+        }
+
+}
+
+.articulos{
+    height: 450px;
+    display: flex;
+    justify-content: center;
+
+    & p{
+        font-size: 18px;
+        font-weight: 200;
+        text-align: center;
+        letter-spacing: 2px;
+        max-width: 400px;
+        padding: 4% 5%;
+    }
+
+}
+
+
+.quienessomos__iconos h2{
+    text-align: center;
+    color:$main-color;
+}
+
+
+.quienessomos__iconos img{
+    display:block;
+    margin:auto;
+    padding-bottom: 8%;
+}
+

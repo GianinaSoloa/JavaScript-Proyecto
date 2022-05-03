@@ -1,0 +1,116 @@
+/* HEADER */
+
+header {
+	
+	width:100%;
+    background: linear-gradient(to bottom, rgb(0,0,0),transparent);
+    padding: 3% 0;
+    position:absolute;
+
+    & img{
+        width: 20em;
+    }
+
+}
+
+/* MENÚ BOOTSTRAP */
+
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: inherit;
+    align-items: center;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.navbar-expand-lg .navbar-collapse {
+    justify-content: flex-end;
+}
+
+#navbarNavDropdown ul a
+{
+    background-color: transparent; 
+    color: $color;
+}
+
+/* HAMBURGUESA BOOTSTRAP */
+
+.navbar-toggler-icon {
+    width: 1em;
+    height: 1em;
+}
+
+.navbar-dark .navbar-toggler {
+    border-color: rgba(255,255,255, 0);
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+button:focus{
+    @extend .navbar-toggler:focus;
+    border-color: none;
+}
+
+
+/* ENLACES MENÚ */
+
+.navbar a {
+    display: block;
+    color: $color;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 10px;
+}
+
+#navbarDropdownMenuLink{
+    outline: none;
+    border: none;
+}
+
+/* MENÚ ACTIVO  */
+
+.navbar ul li a {
+    position: relative;
+}
+
+.navbar ul li a::after {
+    content: "";
+    background-color: $secondary-color;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 30%;
+    height: 2px;
+    opacity: 0;
+    transition: width 1s;
+}
+
+.dropdown-toggle::after {
+    border: none;
+
+}
+
+.navbar ul li a.active::after {
+    opacity: 1;
+}
+
+.navbar ul li a:hover::after {
+    opacity: 1;
+    width: 100%;
+}
+
+
+/* MENÚ FOCUS  */
+
+.nav-link:focus, .nav-link:hover {
+    color: $secondary-color !important;
+}
+
+.dropdown-menu {
+    background-color: transparent; 
+    border: none;
+}

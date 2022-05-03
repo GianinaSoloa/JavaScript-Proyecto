@@ -1,0 +1,22 @@
+/* VIDEO */
+
+video{
+    position: relative;
+    width: 100%;
+    z-index: -1;
+}
+
+.titulo h1 {
+    font-size: 55px;
+    font-weight: 200;
+    padding-top: 4%;
+    text-align: center; 
+}
+
+.titulo h2 {
+    font-size: 23px;
+    font-weight: 200;
+    padding-bottom: 4%;
+    text-align: center;
+    letter-spacing: 2px; 
+}

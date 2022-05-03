@@ -1,0 +1,86 @@
+/* FOOTER */
+
+footer{
+    background-color: $main-color;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__contenedor{
+    width: 80%;
+    border-bottom: 1px solid $color;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo{
+    width: 400px;
+    margin-bottom: 3%;
+
+    & img{
+        width: 250px;
+        margin-top: 5%;
+        margin-left: -2%;
+    }
+}
+
+.logoTexto{
+    font-size: 15px;
+    font-weight: 200;
+    letter-spacing: 2px;
+    color: $color;
+    width: 500px;
+    line-height: 30px;
+    margin-top: 7%;
+
+    & p{
+        padding: 2% 0;
+    
+    }
+
+}
+
+
+.contacto{
+    width: 400px;
+    font-size: 15px;
+    font-weight: 200;
+    color: $color;
+    text-align: right;
+
+    & h5{
+        padding: 4% 0;
+        letter-spacing: 3px; 
+        font-size: 15px;
+    }
+
+    & a:link, & a:visited, & a:hover, & a:active{
+        color: $secondary-color;
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+.redes{
+    width: 80%;
+    text-align: right;
+    margin-top: 1%;    
+}
+
+.icono{
+    font-size: 25px;
+    color: $color;
+    margin-top: 1%;
+    margin-right: .5%;
+
+    &:hover{
+        color: $secondary-color;
+    }
+}

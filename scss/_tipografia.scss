@@ -1,0 +1,41 @@
+/* TIPOGRAFÍA */
+
+.negrita{
+    font-weight: 500;
+}
+
+.parrafo{
+    background-color: $main-color;
+
+    & p{
+        font-size: 23px;
+        font-weight: 200;
+        padding-top: 4%;
+        padding-bottom: 4%;
+        text-align: center;
+        letter-spacing: 2px;
+        color: $color;
+        max-width: 900px;
+        margin: 0 auto;
+        position: relative;
+        animation-name: aparecer;
+        animation-duration: 5s;
+    }
+    
+
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}

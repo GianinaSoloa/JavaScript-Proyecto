@@ -1,0 +1,901 @@
+@charset "UTF-8";
+/* GENERALES */
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  height: 100%; }
+
+body {
+  min-height: 100%; }
+
+html, body {
+  font-size: 17px;
+  font-family: "Josefin Sans", sans-serif;
+  color: #4a4f54; }
+
+/* IR ARRIBA */
+#arriba {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 600; }
+  #arriba a {
+    text-decoration: none;
+    border: 0 none;
+    display: block;
+    height: 3.5rem;
+    width: 3.5rem;
+    line-height: 3.5rem;
+    text-align: center;
+    background: #cedfd7;
+    color: #ffffff;
+    transition: all 0.3s; }
+  #arriba a i {
+    font-size: 1rem;
+    line-height: inherit; }
+  #arriba a:hover {
+    background: #cedfd7; }
+
+/* HTML - IMAGEN PRINCIPAL */
+.imagenprincipal {
+  width: 100%;
+  margin-bottom: 2%; }
+  .imagenprincipal img {
+    width: 100%; }
+
+/* HEADER */
+header {
+  width: 100%;
+  background: linear-gradient(to bottom, black, transparent);
+  padding: 3% 0;
+  position: absolute; }
+  header img {
+    width: 20em; }
+
+/* MENÚ BOOTSTRAP */
+.navbar > .container, .navbar > .container-fluid, .navbar > .container-lg, .navbar > .container-md, .navbar > .container-sm, .navbar > .container-xl, .navbar > .container-xxl {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: inherit;
+  align-items: center;
+  width: 90%;
+  justify-content: space-between; }
+
+.navbar-expand-lg .navbar-collapse {
+  justify-content: flex-end; }
+
+#navbarNavDropdown ul a {
+  background-color: transparent;
+  color: #ffffff; }
+
+/* HAMBURGUESA BOOTSTRAP */
+.navbar-toggler-icon {
+  width: 1em;
+  height: 1em; }
+
+.navbar-dark .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0); }
+
+.navbar-toggler:focus, button:focus {
+  outline: none;
+  box-shadow: none; }
+
+button:focus {
+  border-color: none; }
+
+/* ENLACES MENÚ */
+.navbar a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 10px; }
+
+#navbarDropdownMenuLink {
+  outline: none;
+  border: none; }
+
+/* MENÚ ACTIVO  */
+.navbar ul li a {
+  position: relative; }
+
+.navbar ul li a::after {
+  content: "";
+  background-color: #cedfd7;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 30%;
+  height: 2px;
+  opacity: 0;
+  transition: width 1s; }
+
+.dropdown-toggle::after {
+  border: none; }
+
+.navbar ul li a.active::after {
+  opacity: 1; }
+
+.navbar ul li a:hover::after {
+  opacity: 1;
+  width: 100%; }
+
+/* MENÚ FOCUS  */
+.nav-link:focus, .nav-link:hover {
+  color: #cedfd7 !important; }
+
+.dropdown-menu {
+  background-color: transparent;
+  border: none; }
+
+/* VIDEO */
+video {
+  position: relative;
+  width: 100%;
+  z-index: -1; }
+
+.titulo h1 {
+  font-size: 55px;
+  font-weight: 200;
+  padding-top: 4%;
+  text-align: center; }
+
+.titulo h2 {
+  font-size: 23px;
+  font-weight: 200;
+  padding-bottom: 4%;
+  text-align: center;
+  letter-spacing: 2px; }
+
+/* TIPOGRAFÍA */
+.negrita {
+  font-weight: 500; }
+
+.parrafo {
+  background-color: #4a4f54; }
+  .parrafo p {
+    font-size: 23px;
+    font-weight: 200;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #ffffff;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    animation-name: aparecer;
+    animation-duration: 5s; }
+
+@keyframes aparecer {
+  0% {
+    opacity: 0; }
+  25% {
+    opacity: 0.3; }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1; } }
+
+/* PROYECTOS */
+.proyectos__home {
+  max-width: 900px;
+  height: 1000px;
+  margin: 0 auto;
+  text-align: center; }
+  .proyectos__home h2 {
+    font-size: 33px;
+    font-weight: 200;
+    margin-top: 8%;
+    margin-bottom: 8%; }
+
+.proyectoshome__contenedor {
+  display: grid;
+  grid-template-columns: 400px 450px;
+  grid-template-rows: 350px 350px;
+  justify-content: center;
+  align-content: center;
+  grid-gap: 30px;
+  overflow: hidden;
+  margin-bottom: 11%; }
+
+.proyectoshome__imagen {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .proyectoshome__imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  .proyectoshome__imagen:hover img {
+    opacity: 0.07;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    -ms-transition: opacity 500ms;
+    transition: opacity 500ms; }
+
+.Garden {
+  grid-row: 1/3;
+  grid-column: 1/2; }
+
+.Gorina {
+  grid-row: 1/2;
+  grid-column: 2/3; }
+
+.Gardel {
+  grid-row: 2/3;
+  grid-column: 2/3; }
+
+.proyectoshome__info {
+  position: absolute;
+  opacity: 0;
+  text-align: center; }
+
+.proyectoshome__imagen:hover .proyectoshome__info {
+  opacity: 1;
+  z-index: 10; }
+
+div.proyectoshome__imagen > div > p {
+  margin-bottom: 9%; }
+
+.proyectoshome__enlace {
+  text-decoration: none;
+  color: #4a4f54;
+  font-weight: 700; }
+  .proyectoshome__enlace:hover {
+    text-decoration: none;
+    color: #cedfd7; }
+
+.garden__mobile img {
+  display: none; }
+
+.boton, .boton__form {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 2% 5%;
+  background-color: #4a4f54;
+  border-radius: 5px;
+  transition: all 1s; }
+  .boton:hover, .boton__form:hover {
+    background-color: #cedfd7;
+    color: #ffffff; }
+
+.boton__Info {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 2% 5%;
+  background-color: #a4acb6;
+  border-radius: 5px;
+  transition: all 1s; }
+  .boton__Info:hover {
+    background-color: #cedfd7;
+    color: #ffffff; }
+
+.boton__Proyectos {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 2% 5%;
+  background-color: #6f7477;
+  border-radius: 5px;
+  transition: all 1s; }
+  .boton__Proyectos:hover {
+    background-color: #cedfd7;
+    color: #ffffff; }
+
+.parrafo h2 {
+  font-size: 33px;
+  font-weight: 200;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  text-align: center;
+  color: #ffffff; }
+
+/* SERVICIOS */
+.servicios {
+  position: relative;
+  max-width: 1300px;
+  height: 800px;
+  margin: 0 auto; }
+  .servicios h2 {
+    font-size: 33px;
+    font-weight: 400;
+    margin-top: 8%;
+    margin-bottom: 8%;
+    text-align: center; }
+  .servicios p {
+    margin-bottom: 7%; }
+
+.servicios__contenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center; }
+
+.servicios__imagen {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  .servicios__imagen:hover img {
+    opacity: 0.07;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    -ms-transition: opacity 500ms;
+    transition: opacity 500ms; }
+
+.servicios__info {
+  position: absolute;
+  opacity: 0;
+  text-align: center; }
+
+.servicios__imagen:hover .servicios__info {
+  opacity: 1;
+  z-index: 10; }
+
+.servicios__enlace {
+  text-decoration: none;
+  color: #4a4f54;
+  font-weight: 700; }
+  .servicios__enlace:hover {
+    text-decoration: none;
+    color: #cedfd7; }
+
+/* formulario */
+.formulario h2 {
+  font-size: 33px;
+  font-weight: 400;
+  text-align: center; }
+
+.formulario h3 {
+  font-size: 23px;
+  font-weight: 300;
+  padding-bottom: 2%;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #cedfd7; }
+
+::placeholder {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 200;
+  color: #4a4f54;
+  padding-left: 2%; }
+
+form {
+  margin: 0 auto;
+  width: 600px;
+  padding: 2px;
+  margin-bottom: 10%; }
+  form label {
+    display: block;
+    padding: 11px 0px; }
+
+input, textarea {
+  width: 100%;
+  padding: 8px 0px;
+  border: 1px solid #e8e8e8;
+  margin-bottom: 2%; }
+  input:focus, textarea:focus {
+    background-color: #cedfd7;
+    transition: all 1s;
+    outline: none; }
+
+select {
+  -webkit-appearance: none;
+  width: 100%;
+  border: 1px solid #e8e8e8;
+  padding: 8px;
+  margin-bottom: 2%;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 200;
+  color: #4a4f54;
+  outline: none; }
+
+option i {
+  position: relative; }
+
+data {
+  margin-left: 1% !important; }
+
+/* FOOTER */
+footer {
+  background-color: #4a4f54;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.footer__contenedor {
+  width: 80%;
+  border-bottom: 1px solid #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+
+.logo {
+  width: 400px;
+  margin-bottom: 3%; }
+  .logo img {
+    width: 250px;
+    margin-top: 5%;
+    margin-left: -2%; }
+
+.logoTexto {
+  font-size: 15px;
+  font-weight: 200;
+  letter-spacing: 2px;
+  color: #ffffff;
+  width: 500px;
+  line-height: 30px;
+  margin-top: 7%; }
+  .logoTexto p {
+    padding: 2% 0; }
+
+.contacto {
+  width: 400px;
+  font-size: 15px;
+  font-weight: 200;
+  color: #ffffff;
+  text-align: right; }
+  .contacto h5 {
+    padding: 4% 0;
+    letter-spacing: 3px;
+    font-size: 15px; }
+  .contacto a:link, .contacto a:visited, .contacto a:hover, .contacto a:active {
+    color: #cedfd7;
+    text-decoration: none;
+    outline: none; }
+
+.redes {
+  width: 80%;
+  text-align: right;
+  margin-top: 1%; }
+
+.icono {
+  font-size: 25px;
+  color: #ffffff;
+  margin-top: 1%;
+  margin-right: .5%; }
+  .icono:hover {
+    color: #cedfd7; }
+
+/* HTML - PROYECTOS */
+.proyectos {
+  height: 1500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 2% 0; }
+  .proyectos__article {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; }
+  .proyectos__informacion {
+    width: 300px;
+    font-size: 15px;
+    font-weight: 200;
+    letter-spacing: 2px; }
+    .proyectos__informacion h2 {
+      margin-bottom: 4%; }
+  .proyectos__boton {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 400;
+    padding: 10px 10px;
+    background-color: #4a4f54;
+    border-radius: 5px;
+    transition: all 1s; }
+    .proyectos__boton:hover {
+      background-color: #cedfd7;
+      color: #ffffff; }
+
+.espacio {
+  margin-bottom: 8%; }
+
+.disponibilidad, .disponibilidad__enventa, .disponibilidad__vendido {
+  font-size: 13px;
+  font-weight: 800;
+  padding: 10px 0px; }
+
+.disponibilidad__enventa {
+  color: #cedfd7; }
+
+.disponibilidad__vendido {
+  color: red; }
+
+/* HTML - GARDEN,GORINA.GARDEL */
+.proyectos__contenedor {
+  height: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center; }
+
+.proyecto__contenido {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center; }
+
+.proyectosinside__informacion {
+  max-width: 300px;
+  font-size: 19px;
+  font-weight: 200;
+  letter-spacing: 2px; }
+  .proyectosinside__informacion p {
+    padding: 2% 0%; }
+
+.venta {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 9%;
+  margin-bottom: 9%; }
+  .venta h3 {
+    padding: 0 0 4% 0;
+    letter-spacing: 2px; }
+
+/* HTML - QUIÉNES SOMOS */
+.quienessomos__parrafo {
+  font-size: 23px;
+  font-weight: 200;
+  padding-top: 2%;
+  text-align: center;
+  letter-spacing: 2px;
+  max-width: 900px;
+  margin: 0 auto; }
+  .quienessomos__parrafo p {
+    margin: 4%; }
+
+.articulos {
+  height: 450px;
+  display: flex;
+  justify-content: center; }
+  .articulos p {
+    font-size: 18px;
+    font-weight: 200;
+    text-align: center;
+    letter-spacing: 2px;
+    max-width: 400px;
+    padding: 4% 5%; }
+
+.quienessomos__iconos h2 {
+  text-align: center;
+  color: #4a4f54; }
+
+.quienessomos__iconos img {
+  display: block;
+  margin: auto;
+  padding-bottom: 8%; }
+
+/* HTML - ELEGINOS */
+.informacion__parrafo {
+  font-size: 23px;
+  font-weight: 200;
+  padding-top: 4%;
+  padding-bottom: 2%;
+  text-align: center;
+  letter-spacing: 3px;
+  max-width: 900px;
+  margin: 0 auto; }
+  .informacion__parrafo p {
+    margin: 4%; }
+
+.eleginos__articulo {
+  text-align: center;
+  margin-top: 5%; }
+  .eleginos__articulo img {
+    padding-bottom: 8%;
+    width: 100%; }
+
+/* HTML - POZO */
+.articulos__pozo {
+  height: 600px;
+  display: flex;
+  justify-content: space-evenly; }
+  .articulos__pozo p {
+    font-size: 18px;
+    font-weight: 200;
+    text-align: center;
+    letter-spacing: 2px;
+    max-width: 400px;
+    padding: 4% 5%; }
+
+/******** TABLET ********/
+@media only screen and (max-width: 768px) {
+  /* HOME TABLET */
+  /* MENÚ TABLET */
+  #navbarNavDropdown ul a {
+    padding: 1%; }
+  /* PROYECTOS TABLET */
+  .proyectos__home {
+    height: 950px; }
+  .proyectoshome__contenedor {
+    margin: 0 3% 9% 3%;
+    grid-gap: 15px; }
+  /* SERVICIOS TABLET */
+  .servicios {
+    height: 580px; }
+    .servicios img {
+      width: 80%;
+      object-fit: cover; }
+    .servicios__imagen {
+      width: 100%; }
+  /* FOOTER TABLET */
+  .logoTexto {
+    width: 400px; }
+  .contacto h5 {
+    margin-bottom: 11%; }
+  .contacto p {
+    margin-bottom: 2%; }
+  /* HTML PROYECTOS TABLET */
+  .proyectos__article {
+    height: auto; }
+  .proyectos__informacion {
+    width: 250px;
+    margin-left: 2%; }
+  .proyectos img {
+    width: 500px; }
+  /* HTML GARDEN, GORINA, GARDEL TABLET */
+  .proyectos__contenedor {
+    height: auto;
+    margin-top: 3%; }
+  .proyecto__contenido {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center; }
+    .proyecto__contenido img {
+      width: 100%; }
+  article.proyectos__article.aos-init.aos-animate {
+    width: 100%; }
+  .proyectosinside__informacion {
+    max-width: 600px;
+    text-align: center;
+    margin: 5% 0; }
+    .proyectosinside__informacion h2 {
+      font-size: 23px;
+      margin-bottom: 7%; }
+    .proyectosinside__informacion h3 {
+      margin-bottom: 7%; }
+    .proyectosinside__informacion p {
+      padding: 4% 0%; }
+  .venta {
+    width: 100%;
+    margin: 15% 0%; }
+  body > main > section.venta > h3 {
+    font-size: 18px;
+    margin-bottom: 5%; }
+  /* HTML QUIÉNES SOMOS TABLET */
+  .articulos {
+    height: 550px; }
+    .articulos p {
+      font-size: 17px;
+      padding: 4% 4%; }
+  body > section.articulos > article:nth-child(2) > p {
+    padding: 4% 6%; }
+  /* HTML POZO TABLET */
+  .informacion__parrafo {
+    font-size: 20px;
+    padding-top: 0; }
+  /* HTML LLAVE EN MANO TABLET */
+  .titulo h1 {
+    font-size: 48px; } }
+
+/******** MOBILE ********/
+@media only screen and (max-width: 600px) {
+  /* HOME MOBILE */
+  /* MENÚ MOBILE */
+  header {
+    background: #4a4f54;
+    position: relative; }
+    header img {
+      width: 14em; }
+  nav {
+    margin-top: 2%; }
+  #menu ul a {
+    font-size: 10px;
+    text-align: center;
+    display: inline-block; }
+  ul {
+    display: inline-block; }
+  #menu ul li {
+    text-align: center; }
+  #menu > ul > li:nth-child(2) > ul {
+    display: none; }
+  /* TÍTULO MOBILE */
+  .titulo h1 {
+    font-size: 33px;
+    margin-bottom: 4%; }
+  /* PÁRRAFO MOBILE */
+  .parrafo p {
+    font-size: 16px;
+    padding: 5%; }
+  /* PROYECTOS MOBILE */
+  .proyectos__home {
+    height: auto;
+    text-align: center; }
+    .proyectos__home h2 {
+      font-size: 29px; }
+  .proyectoshome__contenedor {
+    height: 950px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px 300px 300px;
+    justify-content: space-around;
+    margin-right: 5%;
+    margin-left: 5%; }
+  .Garden {
+    grid-row: 1/2;
+    grid-column: 1/1; }
+  .Gorina {
+    grid-row: 2/3;
+    grid-column: 1/1; }
+  .Gardel {
+    grid-row: 3/4;
+    grid-column: 1/1; }
+  .boton {
+    padding: 4% 5%;
+    font-size: 14px; }
+  .parrafo h2 {
+    margin-top: 10%; }
+  /* SERVICIOS MOBILE */
+  .servicios {
+    height: auto; }
+    .servicios img {
+      width: 80%;
+      object-fit: cover; }
+    .servicios__contenedor {
+      flex-direction: column;
+      grid-gap: 50px; }
+    .servicios__imagen {
+      width: 100%; }
+  .parrafo h2 {
+    padding: 9% 0%;
+    font-size: 20px; }
+  /* FORMULARIO MOBILE */
+  .formulario h3 {
+    font-size: 19px; }
+  form {
+    width: 90%;
+    padding: 3%;
+    margin-bottom: 5%; }
+  /* FOOTER MOBILE */
+  footer {
+    height: 500px;
+    justify-content: center;
+    align-items: center; }
+  .footer__contenedor {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0px solid #ffffff; }
+  .logo {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ffffff; }
+    .logo img {
+      margin-left: 0; }
+  .logoTexto {
+    width: 95%;
+    text-align: center;
+    line-height: 17px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    margin-bottom: 7%; }
+  .contacto {
+    width: 100%;
+    text-align: center; }
+    .contacto h3 {
+      letter-spacing: 4px; }
+    .contacto h5 {
+      margin-bottom: 0; }
+  .redes {
+    width: 100%;
+    text-align: center;
+    margin-right: 0; }
+  .boton__form {
+    font-size: 15px; }
+  /* IR ARRIBA - MOBILE */
+  #arriba a {
+    height: 2.5rem;
+    width: 2.5rem;
+    line-height: 2.5rem; }
+  /* HTML PROYECTOS MOBILE */
+  .proyectos {
+    height: auto; }
+    .proyectos__article {
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .proyectos__article img {
+        width: 100%; }
+    .proyectos__informacion {
+      text-align: center;
+      margin: 7% 0;
+      width: 100%; }
+  /* HTML GARDEN, GORINA, GARDEL MOBILE */
+  .proyectos__contenedor {
+    height: auto;
+    margin-top: 3%; }
+  .proyecto__contenido {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center; }
+    .proyecto__contenido img {
+      width: 100%; }
+  .proyectosinside__informacion {
+    text-align: center;
+    margin: 5% 0; }
+    .proyectosinside__informacion h2 {
+      font-size: 23px;
+      margin-top: 3%; }
+    .proyectosinside__informacion h3 {
+      margin-bottom: 7%; }
+    .proyectosinside__informacion p {
+      padding: 4% 3%; }
+  .venta {
+    width: 100%;
+    margin: 15% 0%; }
+  body > main > section.venta > h3 {
+    font-size: 18px;
+    margin-bottom: 5%; }
+  .boton__Info, .boton__Proyectos, .boton {
+    font-size: 13px;
+    padding: 3% 5%;
+    display: block;
+    margin: 2% 5%; }
+  /* HTML QUIÉNES SOMOS MOBILE */
+  .quienessomos__parrafo {
+    font-size: 19px;
+    width: 100%; }
+  .articulos {
+    height: auto;
+    margin: 5% 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  section.articulos > article {
+    margin-top: 7%; }
+  /* HTML POZO MOBILE */
+  .informacion__parrafo {
+    font-size: 21px; }
+  .articulos__pozo {
+    height: 600px;
+    flex-direction: column;
+    justify-content: space-evenly; }
+    .articulos__pozo p {
+      margin: 0 auto; }
+  /* HTML LLAVE EN MANO MOBILE */
+  section.parrafo {
+    margin-bottom: 10%; }
+  #menu ul li a {
+    font-size: 15px; } }

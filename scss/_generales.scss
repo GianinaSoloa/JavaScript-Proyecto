@@ -1,0 +1,64 @@
+/* GENERALES */
+
+* {
+    margin:0;
+    padding:0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
+html, body {
+    font-size:17px;
+    font-family: $font;
+    color: $main-color;
+}
+
+/* IR ARRIBA */
+
+
+#arriba {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 600;
+
+    & a {
+        text-decoration: none;
+        border: 0 none;
+        display: block;
+        height: 3.5rem;
+        width: 3.5rem;
+        line-height: 3.5rem;
+        text-align: center;
+        background: $secondary-color;
+        color: $color;
+        transition: all 0.3s;
+    }
+    
+    & a i {
+        font-size: 1rem;
+        line-height: inherit;
+    }
+    
+    & a:hover {
+        background: $secondary-color;
+    }
+}
+
+
+/* HTML - IMAGEN PRINCIPAL */
+
+.imagenprincipal{
+    width: 100%;
+    margin-bottom: 2%;
+
+    & img{
+        width: 100%;
+    }
+}

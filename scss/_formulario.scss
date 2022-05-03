@@ -1,0 +1,73 @@
+/* formulario */
+
+.formulario h2{
+    font-size: 33px;
+    font-weight: 400;
+    text-align: center;
+
+}
+
+.formulario h3{
+    font-size: 23px;
+    font-weight: 300;
+    padding-bottom: 2%;
+    text-align: center;
+    letter-spacing: 2px;
+    color: $secondary-color;
+}
+
+::placeholder{
+    font-family: $font;
+    font-size: 13px;
+    font-weight: 200;
+    color:$main-color;
+    padding-left: 2%;
+}
+
+form{
+    margin: 0 auto; 
+    width: 600px;   
+    padding: 2px; 
+    margin-bottom: 10%;
+
+    & label{
+        display: block; 
+        padding: 11px 0px; 
+        
+    }
+}
+
+input, textarea{
+    width: 100%;
+    padding: 8px 0px; 
+    border: 1px solid #e8e8e8;
+    margin-bottom: 2%;
+
+    &:focus{
+        background-color: $secondary-color;
+        transition: all 1s;
+        outline: none;
+    }
+}
+
+select{ 
+    -webkit-appearance: none;
+    width: 100%;
+    border: 1px solid #e8e8e8;
+    padding: 8px;
+    margin-bottom: 2%;
+    font-family: $font;
+    font-size: 13px;
+    font-weight: 200;
+    color:$main-color;
+    outline: none;
+}
+
+
+option i{
+    position: relative;
+}
+
+data{
+    margin-left: 1% !important;
+}
