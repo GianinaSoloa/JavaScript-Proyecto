@@ -1,37 +1,54 @@
 
+/* La declaro como let ya que probablemente se modifique en el tiempo debido a la inflación */
+
 let usd = 800;
 
-const aberturas = [
+class Abertura {
 
-  { abertura: "aluminio", porcentaje: 0.05 },
+  constructor (tipoAbertura, porcentaje) {
 
-  { abertura: "pvc", porcentaje: 0.075 }
+    this.tipoAbertura = tipoAbertura;
+    this.porcentaje = porcentaje;
 
-]
+  }
 
-const placards = [
-
-  { placard: "sin placard", porcentaje: 0 },
-
-  { placard: "melamina", porcentaje: 0.05 },
-
-  { placard: "madera maciza", porcentaje: 0.075 }
-
-]
-
-
-
-class CasaCliente {
-
-    constructor (tipoAbertura, tipoPlacard) {
-
-      this.tipoAbertura = tipoAbertura;
-
-      this.tipoPlacard = tipoPlacard;
-    }
+  calcularAbertura(){
+    return usd + this.porcentaje * usd;
+    
+  }
 
 }
 
+class Placard {
+
+  constructor (tipoPlacard, porcentaje) {
+
+    this.tipoPlacard = tipoPlacard;
+    this.porcentaje = porcentaje;
+
+  }
+
+  calcularPlacard(){
+    return usd + this.porcentaje * usd;
+    
+  }
+
+}
+
+/* Arrays con objetos */
+
+const aberturas = []
+aberturas.push(new Abertura("aluminio", 0.05))
+aberturas.push(new Abertura("pvc", 0.075))
+
+
+const placards = []
+placards.push(new Placard("sin placard", 0))
+placards.push(new Placard("melamina", 0.05))
+placards.push(new Placard("madera maciza", 0.075))
+
+
+/* Declaro 3 funciones ya que quiero que tenga siempre la posibilidad de salir en cada pregunta, y a futuro serás muchas más preguntas */
 
 const ingresoAbertura = () => {
 
@@ -83,6 +100,7 @@ const ingresoMetros = () => {
 
 }
 
+/* Comienzo cálculo de presupuesto */
 
 let abertura = ingresoAbertura();
 
@@ -96,9 +114,12 @@ if (abertura !== "0"){
 
     if (metros !== "0"){
 
-      const aberturaSeleccionada = aberturas.find((x) => x.abertura === abertura);
+      const aberturaSeleccionada = aberturas.find((x) => x.Abertura === abertura);
 
-      const placardSeleccionado = placards.find((x) => x.placard === placard);
+      const placardSeleccionado = placards.find((x) => x.Placard === placard);
+
+      console.log(aberturaSeleccionada);
+      console.log(placardSeleccionado);
 
       let seleccion = (aberturaSeleccionada.porcentaje * usd) + (placardSeleccionado.porcentaje * usd) + usd;
 
