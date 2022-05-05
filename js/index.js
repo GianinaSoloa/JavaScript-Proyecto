@@ -50,7 +50,7 @@ placards.push(new Placard("melamina", 0.05))
 placards.push(new Placard("madera maciza", 0.075))
 
 
-/* Declaro 3 funciones ya que quiero que tenga siempre la posibilidad de salir en cada pregunta, y a futuro serás muchas más preguntas */
+/* Declaro 3 funciones ya que quiero que tenga siempre la posibilidad de salir en cada pregunta, y a futuro serán muchas más preguntas */
 
 const ingresoAbertura = () => {
 
@@ -94,7 +94,7 @@ const ingresoMetros = () => {
 
     alert("Por favor ingrese un número");
 
-    metros = parseFloat(prompt("¿Cuántos m2 tendrá tu casa? Ingrese 0 si desea salir"));
+    metrosCliente = parseFloat(prompt("¿Cuántos m2 tendrá tu casa? Ingrese 0 si desea salir"));
 
   }
 
