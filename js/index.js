@@ -3,6 +3,8 @@
 
 let usd = 800;
 
+/* Clases */
+
 class Abertura {
 
   constructor (tipoAbertura, porcentaje) {
@@ -13,7 +15,7 @@ class Abertura {
   }
 
   calcularAbertura(){
-    return usd + this.porcentaje * usd;
+    return this.porcentaje * usd;
     
   }
 
@@ -29,7 +31,7 @@ class Placard {
   }
 
   calcularPlacard(){
-    return usd + this.porcentaje * usd;
+    return this.porcentaje * usd;
     
   }
 
@@ -114,14 +116,11 @@ if (abertura !== "0"){
 
     if (metros !== "0"){
 
-      const aberturaSeleccionada = aberturas.find((x) => x.Abertura === abertura);
+      const aberturaSeleccionada = aberturas.find((x) => x.tipoAbertura === abertura);
 
-      const placardSeleccionado = placards.find((x) => x.Placard === placard);
+      const placardSeleccionado = placards.find((x) => x.tipoPlacard === placard);
 
-      console.log(aberturaSeleccionada);
-      console.log(placardSeleccionado);
-
-      let seleccion = (aberturaSeleccionada.porcentaje * usd) + (placardSeleccionado.porcentaje * usd) + usd;
+      let seleccion =  aberturaSeleccionada.calcularAbertura() +  placardSeleccionado.calcularPlacard() + usd;
 
       const total = (seleccion,metros) => seleccion * metros;
 
