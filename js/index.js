@@ -3,18 +3,18 @@
 
 let usd = 800;
 
-/* Clases */
-
 class Abertura {
 
   constructor (tipoAbertura, porcentaje) {
 
     this.tipoAbertura = tipoAbertura;
+
     this.porcentaje = porcentaje;
 
   }
 
   calcularAbertura(){
+	  
     return this.porcentaje * usd;
     
   }
@@ -26,27 +26,33 @@ class Placard {
   constructor (tipoPlacard, porcentaje) {
 
     this.tipoPlacard = tipoPlacard;
+	  
     this.porcentaje = porcentaje;
 
   }
 
   calcularPlacard(){
+	  
     return this.porcentaje * usd;
     
   }
 
 }
 
-/* Arrays con objetos */
 
 const aberturas = []
+
 aberturas.push(new Abertura("aluminio", 0.05))
+
 aberturas.push(new Abertura("pvc", 0.075))
 
 
 const placards = []
+
 placards.push(new Placard("sin placard", 0))
+
 placards.push(new Placard("melamina", 0.05))
+
 placards.push(new Placard("madera maciza", 0.075))
 
 
@@ -63,7 +69,23 @@ const ingresoAbertura = () => {
     aberturaCliente = prompt ("¿Qué aberturas prefieres? ¿aluminio ó pvc? Ingrese 0 si desea salir");
 
   }
+	
+  if (aberturaCliente === "0"){
+	  
+    let botonPresupuesto = document.getElementById("botonPresupuesto");
+	  
+      botonPresupuesto.className = "background-color-error";
 
+      let parrafo = document.createElement("p");
+	  
+      parrafo.id = "pPresupuesto";
+	  
+      parrafo.innerHTML = "<p>Eligió salir. Para calcular un presupuesto haga clic nuevamente en el botón.</p>"; 
+	  
+      parrafoPresupuesto.append(parrafo);
+	  
+    }
+	
   return aberturaCliente;
 
 }
@@ -102,6 +124,10 @@ const ingresoMetros = () => {
 
 }
 
+let boton = document.getElementById("botonPresupuesto")
+
+boton.onclick = () => {
+  
 /* Comienzo cálculo de presupuesto */
 
 let abertura = ingresoAbertura();
@@ -128,8 +154,19 @@ if (abertura !== "0"){
 
 
       alert(`El precio será de USD ${seleccion}  por m2, por ende tu casa saldrá aproximadamente USD ${casaTotal}`);
-    
+      
+      let botonPresupuesto = document.getElementById("botonPresupuesto");
+		
+      botonPresupuesto.innerText = "Presupuesto Calculado Correctamente";
+		
+      botonPresupuesto.className = "background-color-fine";
+		
+      document.getElementById("pPresupuesto");
+		
+      pPresupuesto.remove();
     }
 
   }
+}
+
 }
