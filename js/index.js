@@ -162,8 +162,7 @@ if (abertura !== "0"){
       botonPresupuesto.className = "background-color-fine";
 		
       document.getElementById("pPresupuesto");
-		
-      pPresupuesto.remove();
+	
     }
 
   }
