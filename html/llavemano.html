@@ -70,30 +70,28 @@
     </section>
 <!--PÁRRAFO-->
 <main>
-<section class="informacion__parrafo" id="parrafoPresupuesto">
+<section class="informacion__parrafo">
     <p>Hacemos tu casa a medida. En otras palabras: hacemos realidad tu sueño. Juntos vamos a diseñar por completo tu casa: definir el estilo, aberturas, pisos, sanitarios, pérgolas y más. Todo basado en el presupuesto que deseas destinar.</p>
     <p>Nos encargamos del pre-proyecto y proyecto, planificación, dirección técnica, dirección ejecutiva y ejecución de obra.</p>
     <p>Si no tenés tiempo ni querés lidiar con los típicos inconvenientes de obra, ¡este tipo de proyectos es ideal para vos!</p>
-    <button class="boton" id="botonPresupuesto">CALCULAR MI PRESUPUESTO</button>
+    <br>
+    <a class="boton" href="#calcularPresupuesto">CALCULAR MI PRESUPUESTO</a>
 </section>
 <!--FRASE-->         
 <section class="parrafo">
     <h2><span class="negrita">CREAMOS</span> Y <span class="negrita">CUMPLIMOS</span> SUEÑOS.</h2>
 </section>
 <!--FORMULARIO-->  
-<section class="formulario">
-    <h2>¿TENÉS TU LOTE?</h2>
-    <h3>hacemos tu casa a medida</h3>
-    <form action="" method="post">
-            <input type="text" name="nombreCompleto" id="nombreCompleto" placeholder="NOMBRE COMPLETO" required>
-            <input type="email" name="email" id="email" placeholder="EMAIL" required>
-            <select name="proyecto">
-                <option disabled selected>TIPO DE PROYECTO</option>
-                <option value="value2">LLAVE EN MANO</option>
-            </select>   
-            <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="COMENTARIO"></textarea>
-            <input class="boton" type="submit" value="QUIERO MI CASA A MEDIDA">
-        </form>
+<section id="calcularPresupuesto">
+    <h2>CALCULO APROXIMADO DE TU CASA</h2>
+    <h3>Vamos a diseñar juntos tu casa y definir el estilo y categoría del amoblamiento, aberturas, pisos, sanitarios, piscina, entre otros. ¿EMPEZAMOS?</h3>
+    <h4>¿Qué aberturas prefieres?</h4>
+    <select id="seleccionAbertura"><option value="">Selecciona una opción</option></select>
+    <h4>¿Qué placard prefieres?</h4>
+    <select id="seleccionPlacard"><option value="">Selecciona una opción</option></select>
+    <h4>¿Cuántos m2 tendrá tu casa?</h4>
+    <input type="text" name="metros" id="metros" required>
+    <a class="boton" id="botonPresupuesto">CALCULAR</a>
 </section>
 </main>
 <!--FOOTER--> 

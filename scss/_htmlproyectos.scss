@@ -38,6 +38,7 @@
         background-color: $main-color;
         border-radius: 5px;
         transition: all 1s;
+        cursor: pointer;
     
         &:hover{
             background-color: $secondary-color;
@@ -47,6 +48,9 @@
     
 }
 
+#botonPresupuesto{
+    cursor: pointer;
+}
 
 .espacio{
     margin-bottom: 8%;
