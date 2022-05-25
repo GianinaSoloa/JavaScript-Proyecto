@@ -96,14 +96,21 @@ boton.addEventListener("click", () => {
   if (abertura.value != "aluminio" && abertura.value != "pvc") {
     error();
     abertura.className = "error";
-  }else if (placard.value != "sin placard" && placard.value != "melamina" && placard.value != "madera maciza") {
+  }
+  if (placard.value != "sin placard" && placard.value != "melamina" && placard.value != "madera maciza") {
     error();
     placard.className = "error";
   } 
+  if (isNaN(metros.value) || metros.value <= "0") {
+    error();
+    metros.className = "error";
+  }
 
   const aberturaSeleccionada = aberturas.find((aberturas) => aberturas.tipoAbertura === abertura.value);
 
   const placardSeleccionado = placards.find((placards) => placards.tipoPlacard === placard.value);
+
+  if (aberturaSeleccionada != null && placardSeleccionado != null) {
 
   let seleccion =  aberturaSeleccionada.calcularAbertura() +  placardSeleccionado.calcularPlacard() + usd;
 
@@ -129,6 +136,6 @@ boton.addEventListener("click", () => {
   abertura.className = "correcto"; 
   placard.className = "correcto"; 
   metros.className = "correcto";  
-
+}
 })
 
