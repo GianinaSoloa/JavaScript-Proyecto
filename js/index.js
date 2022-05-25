@@ -28,6 +28,7 @@ const aberturas = []
 aberturas.push(new Abertura("aluminio", 0.05));
 aberturas.push(new Abertura("pvc", 0.075));
 
+
 const placards = []
 placards.push(new Placard("sin placard", 0));
 placards.push(new Placard("melamina", 0.05));
@@ -48,34 +49,12 @@ const metros = document.getElementById ("metros");
 // Verificar datos
 
 const error = () =>{
-    let error = document.createElement("div");
-    error.className = "container";
-    error.innerHTML = "<h3>Por favor ingrese un parámetro válido</h3>"; 
-    calcularPresupuesto.append(error);
-  
-    let botonCerrarError = document.createElement("a");
-    botonCerrarError.className = "botonPresupuesto";
-    botonCerrarError.innerHTML = "CERRAR"; 
-    error.append(botonCerrarError);
-  
-    botonCerrarError.onclick = () => {
-      error.className = "containerNotShow";
-    }
+  Swal.fire({
+    icon: 'error',
+    title: 'Oops...',
+    text: '¡Parece que no ingresaste un parámetro válido!',
+  })
 }
-
-abertura.addEventListener("input", () => {
-  if (abertura.value != "aluminio" && abertura.value != "pvc") {
-    error();
-    abertura.className = "error";
-  }
-})
-
-placard.addEventListener("input", () => {
-  if (placard.value != "sin placard" && placard.value != "melamina" && placard.value != "madera maciza") {
-    error();
-    placard.className = "error";
-  }
-})
 
 metros.addEventListener("input", () => {
   if (isNaN(metros.value) || metros.value <= "0") {
@@ -83,6 +62,7 @@ metros.addEventListener("input", () => {
     metros.className = "error";
   }
 })
+
 
 // Almaceno en Local Storage 
 
@@ -101,11 +81,9 @@ metros.addEventListener("input", function() {
 // Muestro datos almacenados en Local Storage en DOM
 
 function mostrarDatos(){
-  if (localStorage.length > 0){
-    abertura.selectedIndex = localStorage.getItem("abertura").toString();
-    placard.selectedIndex = localStorage.getItem("placard").toString();
-    metros.value = localStorage.getItem("metros");
-  }
+  localStorage.length > 0 && (abertura.selectedIndex = localStorage.getItem("abertura").toString());
+  localStorage.length > 0 && (placard.selectedIndex = localStorage.getItem("placard").toString());
+  localStorage.length > 0 && (metros.value = localStorage.getItem("metros"));
 };
 
 mostrarDatos();
@@ -124,8 +102,11 @@ boton.addEventListener("click", () => {
   } 
 
   const aberturaSeleccionada = aberturas.find((aberturas) => aberturas.tipoAbertura === abertura.value);
+
   const placardSeleccionado = placards.find((placards) => placards.tipoPlacard === placard.value);
+
   let seleccion =  aberturaSeleccionada.calcularAbertura() +  placardSeleccionado.calcularPlacard() + usd;
+
   const total = (valorSeleccion,valorMetros) => valorSeleccion * valorMetros;
 
   if (isNaN(metros.value) || metros.value === "") {
@@ -133,19 +114,14 @@ boton.addEventListener("click", () => {
     metros.className = "error";
   } else {
     let casaTotal = total(seleccion,metros.value);
-    let presupuestoCreado = document.createElement("div");
-    presupuestoCreado.className = "container";
-    presupuestoCreado.innerHTML = `<h3>¡Tu presupuesto ha sido creado con éxito!</h3><h4>El precio será de USD ${seleccion} por m2, por ende tu casa saldrá aproximadamente USD ${casaTotal}</h4><br><br>`; 
-    calcularPresupuesto.append(presupuestoCreado);
-
-    let botonCerrar = document.createElement("a");
-    botonCerrar.className = "botonPresupuesto";
-    botonCerrar.innerHTML = "CERRAR"; 
-    presupuestoCreado.append(botonCerrar);
-  
-    botonCerrar.onclick = () => {
-      presupuestoCreado.className = "containerNotShow";
+    const correcto = () =>{
+      Swal.fire({
+        icon: 'success',
+        title: '¡Presupuesto creado correctamente!',
+        text: `El precio será de USD ${seleccion} por m2, por ende tu casa saldrá aproximadamente USD ${casaTotal}`,
+      })
     }
+    correcto();
   }
 
   // Quitar recuadro rojo
@@ -155,6 +131,4 @@ boton.addEventListener("click", () => {
   metros.className = "correcto";  
 
 })
-
-
 
