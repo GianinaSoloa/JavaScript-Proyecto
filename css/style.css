@@ -648,7 +648,7 @@ footer {
   max-width: 900px;
   margin: 0 auto;
   margin-bottom: 5%;
-  height: 600px; }
+  height: 750px; }
   #calcularPresupuesto h2 {
     font-size: 33px;
     font-weight: 500;
@@ -679,16 +679,18 @@ footer {
 
 .container {
   background-color: #cedfd7;
-  width: 600px;
+  width: 900px;
+  height: auto;
   max-width: 100%;
   padding: 5%;
-  border-radius: 1%;
+  border-radius: 15px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   text-align: center;
-  margin-top: -400px;
+  margin-top: -600px;
+  margin-bottom: 100px;
   position: relative; }
 
-.containerNotShow {
+.containerOcultar {
   display: none; }
 
 .botonPresupuesto {
@@ -697,6 +699,7 @@ footer {
   font-size: 11px;
   font-weight: 400;
   padding: 2% 5%;
+  margin-top: 3%;
   background-color: #ffffff;
   border-radius: 5px;
   transition: all 1s;
@@ -704,6 +707,59 @@ footer {
   .botonPresupuesto:hover {
     background-color: #4a4f54;
     color: #ffffff; }
+
+#caracteristicas {
+  margin-top: 111px; }
+
+#botonCaracteristicas {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+  cursor: pointer; }
+
+.swal2-styled.swal2-confirm {
+  background-color: #4a4f54;
+  border-color: #cedfd7; }
+
+.swal2-styled.swal2-confirm:hover {
+  background-color: #cedfd7; }
+
+.swal2-styled.swal2-confirm:focus {
+  box-shadow: none; }
+
+.swal2-icon.swal2-success {
+  border-color: #cedfd7;
+  color: #cedfd7; }
+
+.swal2-icon.swal2-success .swal2-success-ring {
+  border: 0.25em solid rgba(206, 223, 215, 0.3); }
+
+.swal2-icon.swal2-success [class^=swal2-success-line] {
+  background-color: #cedfd7; }
+
+.swal2-icon.swal2-error [class^=swal2-x-mark-line] {
+  background-color: #cedfd7; }
+
+.swal2-icon.swal2-error {
+  border-color: #cedfd7;
+  color: #cedfd7; }
+
+.swal2-loader {
+  border-color: #cedfd7; }
+
+.iconoCruz {
+  font-size: 33px;
+  color: #ffffff;
+  margin-right: 1%;
+  margin-right: -800px;
+  cursor: pointer; }
+  .iconoCruz:hover {
+    color: #4a4f54; }
+
+.divCaract {
+  margin-bottom: 50px; }
 
 /******** TABLET ********/
 @media only screen and (max-width: 768px) {

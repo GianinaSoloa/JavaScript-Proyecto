@@ -5,7 +5,7 @@
     max-width: 900px;
     margin: 0 auto; 
     margin-bottom: 5%;
-    height: 600px;
+    height: 750px;
 
     & h2{
         font-size: 33px;
@@ -49,17 +49,19 @@
 
 .container{
     background-color: $secondary-color;
-    width: 600px;
+    width: 900px;
+    height: auto;
     max-width: 100%;
     padding: 5%;
-    border-radius: 1%;
+    border-radius: 15px;
     box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
     text-align: center;
-    margin-top: -400px;
+    margin-top: -600px;
+    margin-bottom: 100px;
     position: relative;
 }
 
-.containerNotShow{
+.containerOcultar{
     display: none;
 }
 
@@ -69,6 +71,7 @@
     font-size: 11px;
     font-weight: 400;
     padding: 2% 5%;
+    margin-top: 3%;
     background-color: $color;
     border-radius: 5px;
     transition: all 1s; 
@@ -78,4 +81,74 @@
         background-color: $main-color;
         color: $color; 
     }
+}
+
+#caracteristicas{
+    margin-top: 111px;
+}
+
+#botonCaracteristicas{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+
+.swal2-styled.swal2-confirm {
+    background-color: $main-color;
+    border-color: $secondary-color;
+}
+
+.swal2-styled.swal2-confirm:hover {
+    background-color: $secondary-color;
+}
+
+.swal2-styled.swal2-confirm:focus {
+    box-shadow: none;
+}
+
+.swal2-icon.swal2-success {
+    border-color: $secondary-color;
+    color: $secondary-color;
+}
+
+.swal2-icon.swal2-success .swal2-success-ring {
+    border: 0.25em solid rgba(206,223,215,.3);
+}
+
+.swal2-icon.swal2-success [class^=swal2-success-line] {
+    background-color: $secondary-color;
+}
+
+
+.swal2-icon.swal2-error [class^=swal2-x-mark-line] {
+    background-color: $secondary-color;
+}
+
+.swal2-icon.swal2-error {
+    border-color: $secondary-color;
+    color: $secondary-color;
+}
+
+.swal2-loader {
+    border-color: $secondary-color;
+}
+
+.iconoCruz {
+    font-size: 33px;
+    color: $color;
+    margin-right: 1%; 
+    margin-right: -800px;
+    cursor: pointer;
+
+    &:hover{
+        color: $main-color;
+    }
+}
+
+.divCaract{
+    margin-bottom: 50px;
 }

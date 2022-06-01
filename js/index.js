@@ -1,5 +1,4 @@
 
-// La declaro como let ya que probablemente se modifique en el tiempo debido a la inflación
 let usd = 800;
 
 class Abertura {
@@ -91,6 +90,7 @@ mostrarDatos();
 // Comienzo cálculo de presupuesto
 
 let boton = document.getElementById("botonPresupuesto");
+
 boton.addEventListener("click", () => {
 
   if (abertura.value != "aluminio" && abertura.value != "pvc") {
@@ -110,32 +110,35 @@ boton.addEventListener("click", () => {
 
   const placardSeleccionado = placards.find((placards) => placards.tipoPlacard === placard.value);
 
+  // Evito datos vacíos
   if (aberturaSeleccionada != null && placardSeleccionado != null) {
 
-  let seleccion =  aberturaSeleccionada.calcularAbertura() +  placardSeleccionado.calcularPlacard() + usd;
+    let seleccion =  aberturaSeleccionada.calcularAbertura() +  placardSeleccionado.calcularPlacard() + usd;
 
-  const total = (valorSeleccion,valorMetros) => valorSeleccion * valorMetros;
+    const total = (valorSeleccion,valorMetros) => valorSeleccion * valorMetros;
 
-  if (isNaN(metros.value) || metros.value === "") {
-    error();
-    metros.className = "error";
-  } else {
-    let casaTotal = total(seleccion,metros.value);
-    const correcto = () =>{
-      Swal.fire({
-        icon: 'success',
-        title: '¡Presupuesto creado correctamente!',
-        text: `El precio será de USD ${seleccion} por m2, por ende tu casa saldrá aproximadamente USD ${casaTotal}`,
-      })
+// Verifico datos
+
+    if (isNaN(metros.value) || metros.value === "") {
+      error();
+      metros.className = "error";
+    } else {
+      let casaTotal = total(seleccion,metros.value);
+      const correcto = () =>{
+        Swal.fire({
+          icon: 'success',
+          title: '¡Presupuesto creado correctamente!',
+          text: `El precio será de USD ${seleccion} por m2, por ende tu casa saldrá aproximadamente USD ${casaTotal}`,
+        })
+      }
+      correcto();
     }
-    correcto();
+
+    // Quitar recuadro rojo
+
+    abertura.className = "correcto"; 
+    placard.className = "correcto"; 
+    metros.className = "correcto";  
   }
-
-  // Quitar recuadro rojo
-
-  abertura.className = "correcto"; 
-  placard.className = "correcto"; 
-  metros.className = "correcto";  
-}
 })
 
