@@ -96,45 +96,44 @@
     cursor: pointer;
 }
 
-
 .swal2-styled.swal2-confirm {
-    background-color: $main-color;
-    border-color: $secondary-color;
+    background-color: $main-color !important;
+    border-color: $secondary-color !important;
 }
 
 .swal2-styled.swal2-confirm:hover {
-    background-color: $secondary-color;
+    background-color: $secondary-color !important;
 }
 
 .swal2-styled.swal2-confirm:focus {
-    box-shadow: none;
+    box-shadow: none !important;
 }
 
 .swal2-icon.swal2-success {
-    border-color: $secondary-color;
-    color: $secondary-color;
+    border-color: $secondary-color !important;
+    color: $secondary-color !important;
 }
 
 .swal2-icon.swal2-success .swal2-success-ring {
-    border: 0.25em solid rgba(206,223,215,.3);
+    border: 0.25em solid rgba(206,223,215,.3) !important;
 }
 
 .swal2-icon.swal2-success [class^=swal2-success-line] {
-    background-color: $secondary-color;
+    background-color: $secondary-color !important;
 }
 
 
 .swal2-icon.swal2-error [class^=swal2-x-mark-line] {
-    background-color: $secondary-color;
+    background-color: $secondary-color !important;
 }
 
 .swal2-icon.swal2-error {
-    border-color: $secondary-color;
-    color: $secondary-color;
+    border-color: $secondary-color !important;
+    color: $secondary-color !important;
 }
 
 .swal2-loader {
-    border-color: $secondary-color;
+    border-color: $secondary-color !important;
 }
 
 .iconoCruz {

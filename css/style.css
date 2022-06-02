@@ -720,34 +720,34 @@ footer {
   cursor: pointer; }
 
 .swal2-styled.swal2-confirm {
-  background-color: #4a4f54;
-  border-color: #cedfd7; }
+  background-color: #4a4f54 !important;
+  border-color: #cedfd7 !important; }
 
 .swal2-styled.swal2-confirm:hover {
-  background-color: #cedfd7; }
+  background-color: #cedfd7 !important; }
 
 .swal2-styled.swal2-confirm:focus {
-  box-shadow: none; }
+  box-shadow: none !important; }
 
 .swal2-icon.swal2-success {
-  border-color: #cedfd7;
-  color: #cedfd7; }
+  border-color: #cedfd7 !important;
+  color: #cedfd7 !important; }
 
 .swal2-icon.swal2-success .swal2-success-ring {
-  border: 0.25em solid rgba(206, 223, 215, 0.3); }
+  border: 0.25em solid rgba(206, 223, 215, 0.3) !important; }
 
 .swal2-icon.swal2-success [class^=swal2-success-line] {
-  background-color: #cedfd7; }
+  background-color: #cedfd7 !important; }
 
 .swal2-icon.swal2-error [class^=swal2-x-mark-line] {
-  background-color: #cedfd7; }
+  background-color: #cedfd7 !important; }
 
 .swal2-icon.swal2-error {
-  border-color: #cedfd7;
-  color: #cedfd7; }
+  border-color: #cedfd7 !important;
+  color: #cedfd7 !important; }
 
 .swal2-loader {
-  border-color: #cedfd7; }
+  border-color: #cedfd7 !important; }
 
 .iconoCruz {
   font-size: 33px;
