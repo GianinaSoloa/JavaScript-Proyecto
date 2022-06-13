@@ -617,7 +617,7 @@ footer {
   font-weight: 200;
   padding-bottom: 2%;
   text-align: center;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   max-width: 900px;
   margin: 0 auto; }
   .informacion__parrafo p {
@@ -644,11 +644,11 @@ footer {
     padding: 4% 5%; }
 
 #calcularPresupuesto {
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   max-width: 900px;
   margin: 0 auto;
   margin-bottom: 5%;
-  height: 750px; }
+  height: 550px; }
   #calcularPresupuesto h2 {
     font-size: 33px;
     font-weight: 500;
@@ -656,13 +656,14 @@ footer {
     color: #cedfd7;
     margin-bottom: 2%; }
   #calcularPresupuesto h3 {
-    font-size: 23px;
+    font-size: 21px;
     font-weight: 400;
     text-align: center;
     margin-bottom: 5%; }
   #calcularPresupuesto h4 {
-    font-size: 19px;
-    font-weight: 300; }
+    font-size: 17px;
+    font-weight: 200;
+    letter-spacing: 1px; }
   #calcularPresupuesto h5 {
     font-size: 15px;
     font-weight: 200;
@@ -708,17 +709,6 @@ footer {
     background-color: #4a4f54;
     color: #ffffff; }
 
-#caracteristicas {
-  margin-top: 111px; }
-
-#botonCaracteristicas {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  width: 50%;
-  margin: 0 auto;
-  cursor: pointer; }
-
 .swal2-styled.swal2-confirm {
   background-color: #4a4f54 !important;
   border-color: #cedfd7 !important; }
@@ -760,6 +750,34 @@ footer {
 
 .divCaract {
   margin-bottom: 50px; }
+
+.caracteristicas {
+  background-color: #cedfd7;
+  padding: 55px; }
+
+#caracteristicas {
+  text-align: center;
+  font-size: 25px; }
+
+#botonCaracteristicas {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 33%;
+  margin: 0 auto;
+  cursor: pointer;
+  background-color: #4a4f54;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 15px;
+  border-radius: 5px;
+  transition: all 1s;
+  margin-top: 3%; }
+  #botonCaracteristicas:hover {
+    background-color: #ffffff;
+    color: #cedfd7;
+    font-weight: 800; }
 
 /******** TABLET ********/
 @media only screen and (max-width: 768px) {
